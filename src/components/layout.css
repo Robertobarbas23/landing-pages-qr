@@ -222,3 +222,16 @@ pre tt:before,
 pre tt:after {
   content: none;
 }
+footer{
+  background-color: black;
+}
+
+.botones{
+  background-image: url('../images/fuente.jpg');
+  text-align: center;
+  padding: 15em;
+}
+button{
+  margin: 3em;
+  padding: 3em;
+}

@@ -5,6 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
+import AlertButton from "../components/button/button"
 
 const links = [
   {
@@ -29,7 +30,7 @@ const links = [
     text: "Build and Host",
     url: "https://www.gatsbyjs.com/cloud",
     description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
+      "Now you're ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
   },
 ]
 
@@ -49,19 +50,19 @@ const samplePageLinks = [
 const moreLinks = [
   { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
   {
-    text: "Documentation",
+    text: "Aviso legal",
     url: "https://gatsbyjs.com/docs/",
   },
   {
-    text: "Starters",
+    text: "Accesibilidad",
     url: "https://gatsbyjs.com/starters/",
   },
   {
-    text: "Showcase",
+    text: "Politica de cookies",
     url: "https://gatsbyjs.com/showcase/",
   },
   {
-    text: "Contributing",
+    text: "Política de privacidad",
     url: "https://www.gatsbyjs.com/contributing/",
   },
   { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
@@ -73,7 +74,7 @@ const IndexPage = () => (
   <Layout>
     <div className={styles.textCenter}>
       <StaticImage
-        src="../images/example.png"
+        src="../images/logotipo.png"
         loading="eager"
         width={64}
         quality={95}
@@ -82,7 +83,7 @@ const IndexPage = () => (
         style={{ marginBottom: `var(--space-3)` }}
       />
       <h1>
-        Welcome to <b>Gatsby!</b>
+        Generador <b>QR</b>
       </h1>
       <p className={styles.intro}>
         <b>Example pages:</b>{" "}
@@ -96,6 +97,12 @@ const IndexPage = () => (
         Edit <code>src/pages/index.js</code> to update this page.
       </p>
     </div>
+    <div className="botones">
+    <AlertButton message='inicio sesion'> Acceso empleados </AlertButton>
+
+    <br></br>
+    <AlertButton message='patrimonio nacional'> Información institucional </AlertButton>
+  </div>
     <ul className={styles.list}>
       {links.map(link => (
         <li key={link.url} className={styles.listItem}>
