@@ -1,7 +1,7 @@
 :root {
   --border-radius: 4px;
   --color-text: #333;
-  --color-primary: #7026b9;
+  --color-primary: #040107;
   --color-code-bg: #fff4db;
   --color-code: #8a6534;
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
@@ -42,6 +42,9 @@ body {
   font-weight: normal;
   margin: 0;
   word-wrap: break-word;
+  background-image: url('../images/inicio-ordena.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 a {
   background-color: transparent;
@@ -223,15 +226,52 @@ pre tt:after {
   content: none;
 }
 footer{
-  background-color: black;
+  background-color: rgb(192, 192, 192);
 }
 
 .botones{
-  background-image: url('../images/fuente.jpg');
+  background-image: url('../images/Fuente_Boticaria.jpg');
   text-align: center;
-  padding: 15em;
+  padding: 1em;
+  background-repeat: no-repeat;
+  background-size: cover;
+   align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+
 }
-button{
+.button{
   margin: 3em;
   padding: 3em;
+  background-color:rgb(186, 181, 181);
+  border-radius: 100px;
+  text-decoration: none;
+
+
+  
+ 
+}
+.button:hover{
+  background-color: brown;
+  color: white;
+}
+.layoue{
+  background-color: antiquewhite;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
+
+}
+footer{
+  background-color: black;
+  color: #efebe4;
+  height: 90px;
+  
+}
+a{
+  color: rgb(232, 232, 228);
+  margin: 1em;
+}
+.footerfoto{
+  text-align: right;
 }
