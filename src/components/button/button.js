@@ -1,7 +1,9 @@
 import * as React from 'react'
 
-function AlertButton(){
+
+function TandemButton({enlace,children}){
   return(
-    <a href="page-2" role='button' className='button'>Acceso empleados</a>
-  )}
-export default AlertButton
+    <a href={enlace} role='button' className='button'>{children}</a>
+  )
+}
+export default TandemButton

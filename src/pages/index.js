@@ -5,8 +5,8 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
-import AlertButton from "../components/button/button"
-import AlertButton2 from "../components/button/buttoninfo"
+import TandemButton from "../components/button/button"
+import archivosqr from "./archivosqr"
 
 const links = [
   
@@ -68,10 +68,10 @@ const IndexPage = () => (
       </p>
     </div>
     <div className="botones">
-    <AlertButton> </AlertButton>
-
+    
+    <TandemButton enlace="inicio" >Acceso a empleados</TandemButton>
     <br></br>
-   <AlertButton2></AlertButton2>
+    <TandemButton enlace="Info" >Información institucional</TandemButton>
   </div>
   </div>
   </Layout>

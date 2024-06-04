@@ -248,6 +248,7 @@ footer{
   background-color:rgb(186, 181, 181);
   border-radius: 100px;
   text-decoration: none;
+  
 
 
   
@@ -274,4 +275,31 @@ a{
 }
 .footerfoto{
   text-align: right;
+}
+.qrinicio{
+  background-color: antiquewhite;
+  padding: 2em;
+  align-items: center;
+  text-align: center;
+  margin: 2em;
+  border: 3px solid #43381B;
+  box-shadow:  5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 1em;
+}
+.qrarchivo{
+  background-color: antiquewhite;
+  padding: 2em;
+  align-items: center;
+  text-align: center;
+  margin: 2em;
+  border: 3px solid #43381B;
+  box-shadow:  5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 1em;
+}
+.infoinst{
+  background-color: rgb(253, 252, 251);
+  padding: 2em;
+font-family: Arial, Helvetica, sans-serif;
+  
+
 }

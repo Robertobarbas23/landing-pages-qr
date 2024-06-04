@@ -6,6 +6,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Footer from "./footer"
 
 import "./layout.css"
+import archivosqr from "../archivosqr"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
