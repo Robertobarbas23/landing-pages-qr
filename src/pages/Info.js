@@ -1,11 +1,60 @@
-import React from "react";
+import React, { useState }from "react";
+import {
+  Accordion,
+  AccordionBody,
+  AccordionHeader,
+  AccordionItem,
+} from 'reactstrap';
 import Layout from "../components/layout"
 import "../components/layout.css"
 
 function Info(){
+  const [open, setOpen] = useState('1');
+  const toggle = (id) => {
+    if (open === id) {
+      setOpen();
+    } else {
+      setOpen(id);
+    }
+  };
   return(
     <Layout>
-      <div className="infoinst">
+      
+      <div className="infoinst" >
+      <div>
+      <Accordion open={open} toggle={toggle}>
+        <AccordionItem>
+          <AccordionHeader targetId="1">Accordion Item 1</AccordionHeader>
+          <AccordionBody accordionId="1">
+            <strong>This is the first item&#39;s accordion body.</strong>
+            You can modify any of this with custom CSS or overriding our default
+            variables. It&#39;s also worth noting that just about any HTML can
+            go within the <code>.accordion-body</code>, though the transition
+            does limit overflow.
+          </AccordionBody>
+        </AccordionItem>
+        <AccordionItem>
+          <AccordionHeader targetId="2">Accordion Item 2</AccordionHeader>
+          <AccordionBody accordionId="2">
+            <strong>This is the second item&#39;s accordion body.</strong>
+            You can modify any of this with custom CSS or overriding our default
+            variables. It&#39;s also worth noting that just about any HTML can
+            go within the <code>.accordion-body</code>, though the transition
+            does limit overflow.
+          </AccordionBody>
+        </AccordionItem>
+        <AccordionItem>
+          <AccordionHeader targetId="3">Accordion Item 3</AccordionHeader>
+          <AccordionBody accordionId="3">
+            <strong>This is the third item&#39;s accordion body.</strong>
+            You can modify any of this with custom CSS or overriding our default
+            variables. It&#39;s also worth noting that just about any HTML can
+            go within the <code>.accordion-body</code>, though the transition
+            does limit overflow.
+          </AccordionBody>
+        </AccordionItem>
+      </Accordion>
+    </div>
       <h1>SOBRE PATRIMONIO NACIONAL: CONOCE NUESTRA HISTORIA</h1>
       <p>Patrimonio Nacional es un organismo público regulado por una Ley específica de 1982, Ley 23/1982, de 16 de junio, heredera de una larga serie de disposiciones entre las cuales cabe destacar las leyes de 1865, 1869, 1876, 1932 y 1940, aparte de las ordenanzas anteriores al siglo XIX. En definitiva, esta entidad estatal constituye el núcleo esencial y más importante del antiguo Real Patrimonio, o Patrimonio de la Corona, denominado Patrimonio de la República por la Ley de 1932, y con su nombre actual por las leyes de 1940 y 1982.</p>
       <h2>DOBLE FUNCIÓN: CONSTITUCIONAL Y CULTURAL</h2>

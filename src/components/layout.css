@@ -82,6 +82,8 @@ h1 {
 }
 h1 > b {
   color: var(--color-primary);
+  
+ 
 }
 img {
   border-style: none;
@@ -243,8 +245,8 @@ footer{
 
 }
 .button{
-  margin: 3em;
-  padding: 3em;
+  margin: 2em;
+  padding: 2em;
   background-color:rgb(186, 181, 181);
   border-radius: 100px;
   text-decoration: none;
@@ -301,5 +303,10 @@ a{
   padding: 2em;
 font-family: Arial, Helvetica, sans-serif;
   
+
+}
+h1{
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 300%;
 
 }

@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 import TandemButton from "../components/button/button"
-import archivosqr from "./archivosqr"
+
 
 const links = [
   
@@ -53,7 +53,7 @@ const IndexPage = () => (
         style={{ marginBottom: `var(--space-3)` }}
       />
       <h1>
-        Generador <b>QR</b>
+        GENERADOR <b>QR</b>
       </h1>
       <p className={styles.intro}>
         <b></b>{" "}
