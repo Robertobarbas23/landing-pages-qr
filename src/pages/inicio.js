@@ -18,7 +18,7 @@ function Inicio(){
         style={{ marginBottom: `var(--space-3)` }}
       />
       <br></br>
-    <TandemButton enlace="crear-qr" >Crear QR</TandemButton>
+    <TandemButton enlace="/crear-qr" >Crear QR</TandemButton>
   </div>
   <div className="qrarchivo">
   <h2>ARCHIVO QR</h2>
@@ -50,7 +50,7 @@ function Inicio(){
     style={{ marginBottom: `var(--space-3)` }}
     />
   <br></br>
-  <TandemButton enlace="#" >Acceder</TandemButton>
+  <TandemButton enlace="#">Acceder</TandemButton>
   </div>
 </Layout>
   )
