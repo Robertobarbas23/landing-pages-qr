@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -11,6 +12,17 @@ const Header = ({ siteTitle }) => (
       justifyContent: `space-between`,
     }}
   >
+    <a href="/">
+    <StaticImage
+  src="../images/logotipo.png"
+  loading="eager"
+  width={80}
+  quality={100}
+  formats={["auto", "webp", "avif"]}
+  alt=""
+  style={{ marginBottom: `var(--space-3)` }}
+/>
+</a>
     
     
   </header>

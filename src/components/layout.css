@@ -312,3 +312,16 @@ font-family: Georgia, 'Times New Roman', Times, serif;
 font-size: 300%;
 
 }
+.colored-box {
+  background-color: #f0f8ff;
+  border: 2px solid #add8e6;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+header{
+  background-color: rgb(199, 196, 148);
+  height:80px;
+}

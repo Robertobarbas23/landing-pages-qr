@@ -16,7 +16,7 @@ const Footer = () => {
   >
     © {new Date().getFullYear()} &middot; 
     {` `}
-    <a href="https://www.patrimonionacional.es/">Patrimonio Nacional</a>
+    <a href="/Info">Patrimonio Nacional</a>
 
    
 
