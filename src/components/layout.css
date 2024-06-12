@@ -325,3 +325,6 @@ header{
   background-color: rgb(199, 196, 148);
   height:80px;
 }
+.activeTabs{
+  text-align: center;
+}

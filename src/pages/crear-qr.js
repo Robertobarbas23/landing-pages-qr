@@ -6,6 +6,8 @@ import MyComponent from "../components/crearqr-componentes/componente1";
 import QRCode from 'qrcode.react';
 import { toPng, toJpeg, toSvg } from 'html-to-image';
 import download from 'downloadjs';
+import TabsTandem from "../components/tabstandem";
+
 
 function Crearqr() {
   const [inputValue, setInputValue] = useState('');
@@ -53,9 +55,12 @@ function Crearqr() {
   };
   const colorOptions = ['black', 'blue', 'red', 'green', 'yellow', 'purple', 'orange', 'pink', 'magenta']; // Colores ampliados
   return (
+
     <Layout>
-      <div style={containerStyle}>
+<div style={containerStyle}>
+
         <h1>GENERADOR DE QR</h1>
+        <TabsTandem></TabsTandem>
         <Collapse2></Collapse2>
         <br />
         <p>Introduce tu texto o url aquí:</p>
