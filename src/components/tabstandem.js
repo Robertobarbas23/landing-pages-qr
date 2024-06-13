@@ -1,75 +1,86 @@
-import React, { useState } from 'react';
-import {
-  Nav,
-  NavItem,
-  NavLink,
-  TabContent,
-  TabPane,
-  Row,
-  Col
-} from 'reactstrap';
-import classnames from 'classnames';
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Typography from '@mui/material/Typography';
+import { useState } from "react";
+import MapaConMarcador from './mapa';
 
-const TabsTandem = () => {
-  const [activeTab, setActiveTab] = useState('1');
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
 
-  const toggle = tab => {
-    if (activeTab !== tab) setActiveTab(tab);
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+export default function CenteredTabs({ inputValue, setInputValue, latLng, setLatLng, setInputType }) {
+  const [value, setValue] = React.useState(0);
+
+  const handleLatChange = (event) => {
+    const newLat = parseFloat(event.target.value);
+    if (!isNaN(newLat)) {
+      setLatLng((prev) => ({ ...prev, lat: newLat }));
+    }
+  };
+
+  const handleLngChange = (event) => {
+    const newLng = parseFloat(event.target.value);
+    if (!isNaN(newLng)) {
+      setLatLng((prev) => ({ ...prev, lng: newLng }));
+    }
+  };
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+    const inputTypes = ['url', 'text', 'coordinates'];
+    setInputType(inputTypes[newValue]);
+  };
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
   };
 
   return (
-    <div>
-      <Nav tabs>
-        <NavItem>
-          <NavLink
-            className={classnames({ active: activeTab === '1' })}
-            onClick={() => { toggle('1'); }}
-          >
-            URL
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink
-            className={classnames({ active: activeTab === '2' })}
-            onClick={() => { toggle('2'); }}
-          >
-            Mapa Geolocalización
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink
-            className={classnames({ active: activeTab === '3' })}
-            onClick={() => { toggle('3'); }}
-          >
-            Descargar Qr
-          </NavLink>
-        </NavItem>
-      </Nav>
-      <TabContent activeTab={activeTab}>
-        <TabPane tabId="1">
-          <Row>
-            <Col sm="12">
-              
-            </Col>
-          </Row>
-        </TabPane>
-        <TabPane tabId="2">
-          <Row>
-            <Col sm="12">
-              
-            </Col>
-          </Row>
-        </TabPane>
-        <TabPane tabId="3">
-          <Row>
-            <Col sm="12">
-             
-            </Col>
-          </Row>
-        </TabPane>
-      </TabContent>
-    </div>
+    <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
+      <Tabs value={value} onChange={handleChange} centered>
+        <Tab label="URL" />
+        <Tab label="Texto" />
+        <Tab label="Coordenadas" />
+      </Tabs>
+      <TabPanel value={value} index={0}>
+        <h3>Introduce tu URL:</h3>
+        <input type="text" value={inputValue} onChange={handleInputChange} />
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        <h3>Introduce tu Texto:</h3>
+        <input type="text" value={inputValue} onChange={handleInputChange} />
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <h3>Introduce tus Coordenadas: (Latitud, Longitud)</h3>
+        <label>
+          Latitud:
+          <input type="number" value={latLng.lat} onChange={handleLatChange} />
+        </label>
+        <label>
+          Longitud:
+          <input type="number" value={latLng.lng} onChange={handleLngChange} />
+        </label>
+        <MapaConMarcador setLatLng={setLatLng} />
+        {/* <p> Latitud: {latLng.lat}, Longitud: {latLng.lng}</p> */}
+      </TabPanel>
+    </Box>
   );
-};
-
-export default TabsTandem;
+}
