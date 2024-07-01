@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import './EmployeeLoginForm.css';
+
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 const EmployeeLoginForm = () => {

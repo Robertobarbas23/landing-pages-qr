@@ -26,7 +26,7 @@ const IndexPage = () => (
       
     </div>
     <div className="botones">
-    <TandemButton enlace="/crear-qr" >ACCESO EMPLEADOS</TandemButton>
+    <TandemButton enlace="/iniciosesion" >ACCESO EMPLEADOS</TandemButton>
     
     <br></br>
 <TandemButton enlace="/Info" >INFORMACIÓN INSTITUCIONAL</TandemButton>

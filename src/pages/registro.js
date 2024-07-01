@@ -1,75 +1,38 @@
 import React, { useState } from 'react';
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-const RegistroUsuarios = () => {
-    const [nombre, setNombre] = useState('');
-    const [email, setEmail] = useState('');
-    const [confirmemail, setConfirmEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmpassword, setConfirmPassword] = useState('');
-    const [delegacion, setDelegacion] = useState('');
-  return (
-    <Layout>
-      <div className="">
-        <form className="login-form">
-          <h2>Registro de usuarios</h2>
-          <label htmlFor="username">Nombre:</label>
-          <input
-           type="text"
-            id="username" 
-             placeholder="Escribe tu nombre"
-            value={nombre}
-            onChange={(e) => setNombre(e.target.value)}
+import "./LoginForm.css"
+import { StaticImage } from 'gatsby-plugin-image';
+import Layout from '../components/layout';
+import Registro from '../components/formregistro';
 
-            />
 
-          <label htmlFor="text">Delegación:</label>
-          <input 
-          type="text" 
-          id="text" 
-          placeholder="Escribe aquí tu delegación"
-            value={delegacion}
-            onChange={(e) => setDelegacion(e.target.value)}
-          
-        />
 
-          <label htmlFor="email">Correo electrónico:</label>
-          <input 
-          type="email" 
-          id="email" 
-          placeholder="Escribe aquí tu correo electrónico"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          
-          />
 
-          <label htmlFor="confirmemail">Confirmar correo electrónico:</label>
-          <input
-           type="email" 
-           id="confirmemail" 
-           placeholder="Escribe aquí tu correo electrónico"
-            value={confirmemail}
-            onChange={(e) => setConfirmEmail(e.target.value)}
-            />
+const Register = () => {
 
-          <label htmlFor="password">Contraseña:</label>
-          <input 
-          type="password" 
-          id="password" 
-          placeholder="Escribe aquí tu contraseña"
-            value={confirmemail}
-            onChange={(e) => setConfirmEmail(e.target.value)}
-           />
 
-          <label htmlFor="confirmpass">Confirmar contraseña:</label>
-          <input type="confirmpass" id="confirmpass" name="confirmpass" required />
-          
+    return (
+      <Layout>
+        <div className="login-form-container">
          
-          <button type="submit">Registrar</button>
-        </form>
-      </div>
-    </Layout>
-  );
+          <div className="login-form"> 
+        <StaticImage
+        src="../images/logotipo.png"
+        loading="eager"
+        width={250}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt=""
+        style={{ marginBottom: `var(--space-3)` }}
+      />
+      <h2>Registro</h2>
+         
+        <Registro></Registro>
+        </div>
+        </div>
+        <a href="/" role='button' className='button'>Volver a inicio</a>
+      <a href="/inicio" role='button' className='button'>Siguiente</a>
+        </Layout>
+    );
 };
-export default RegistroUsuarios;
-export const Head = () => <Seo title="Registro de usuarios" />
+
+export default Register;

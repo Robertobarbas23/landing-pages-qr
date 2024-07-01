@@ -8,6 +8,7 @@ import { toPng, toJpeg, toSvg } from 'html-to-image';
 import download from 'downloadjs';
 import TabsTandem from "../components/tabstandem";
 import CenteredTabs from "../components/tabstandem";
+import { FaDownload, FaEdit, FaSave } from 'react-icons/fa';
 
 
 function Crearqr() {
@@ -83,7 +84,8 @@ function Crearqr() {
         <div className="qr-contenido">
         <div ref={qrRef} className="black">
         
-          <p>Este es tu QR generado</p>
+          <p><FaEdit style={{ color: '#43381B' }}/>Este es tu QR generado</p>
+
         <QRCode
               value={inputType === 'coordinates' ? `${latLng.lat},${latLng.lng}` : inputValue}
               size={qrSize}
